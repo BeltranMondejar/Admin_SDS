@@ -1,0 +1,242 @@
+/* admin.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    color: #F2F2F2;
+    display: flex;
+}
+
+a {
+    color: #FF1C1C;
+    text-decoration: none;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #111111;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    color: #FF1C1C;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #F2F2F2;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #FF1C1C;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(255, 28, 28, 0.2);
+}
+
+h1, h2 {
+    color: #FF1C1C;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #FF1C1C;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #FF1C1C;
+    text-align: center;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button--create {
+    background-color: #28a745;
+    color: white;
+}
+.button--create:hover {
+    background-color: #218a39;
+}
+.button--edit {
+    background-color: #007BFF;
+    color: white;
+}
+
+.button--edit:hover {
+    background-color: #0056b3;
+}
+
+.button--delete {
+    background-color: #FF1C1C;
+    color: white;
+}
+
+.button--delete:hover {
+    background-color: #D11212;
+}
+
+/* Estilos para la sección de programación de partidos */
+.programacion {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(255, 28, 28, 0.2);
+}
+
+.programacion h2 {
+    color: #FF1C1C;
+    text-align: center;
+}
+
+.programacion .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.programacion label {
+    font-weight: bold;
+}
+
+.programacion input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #FF1C1C;
+    background-color: #333;
+    color: white;
+}
+
+.programacion button {
+    padding: 10px;
+    background-color: #FF1C1C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.programacion button:hover {
+    background-color: #D11212;
+}
+
+/* Ocultar modal por defecto */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 28, 28, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #FF1C1C;
+    background-color: #333;
+    color: white;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #FF1C1C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #D11212;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.close:hover {
+    color: #FF1C1C;
+}

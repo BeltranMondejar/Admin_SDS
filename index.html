@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrador SDS</title>
+    <link rel="stylesheet" href="extras/admin.css">
+</head>
+<body>
+    <main class="content">
+        <section id="resumen">
+            <h1>Resumen del Torneo</h1>
+            <div class="stats">
+                <div class="card">Equipos inscritos: <span id="totalEquipos">0</span></div>
+                <div class="card">Total jugadores: <span id="totalJugadores">0</span></div>
+                <div class="card">Partidos programados: <span id="totalPartidos">0</span></div>
+            </div>
+        </section>
+        <section id="equipos">
+            <h2>Lista de Equipos</h2>
+            <table id="equiposTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Abreviatura</th>
+                        <th>Jugadores</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+        <section id="partidos">
+            <h2>Programación de Partidos</h2>
+            <div class="form-group">
+                <label for="equipo1">Equipo 1:</label>
+                <input type="text" id="equipo1" placeholder="Nombre del equipo 1">
+                <label for="equipo2">Equipo 2:</label>
+                <input type="text" id="equipo2" placeholder="Nombre del equipo 2">
+                <label for="fecha">Fecha del partido:</label>
+                <input type="date" id="fecha">
+                <button id="crearPartido" class="button--create">Crear Partido</button>
+            </div>
+            <table id="partidosTable">
+                <thead>
+                    <tr>
+                        <th>Equipo 1</th>
+                        <th>Equipo 2</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Modal para editar partidos -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Editar Partido</h2>
+            <label for="modalEquipo1">Equipo 1:</label>
+            <input type="text" id="modalEquipo1">
+            <label for="modalEquipo2">Equipo 2:</label>
+            <input type="text" id="modalEquipo2">
+            <label for="modalFecha">Fecha:</label>
+            <input type="date" id="modalFecha">
+            <button id="saveEdit">Guardar Cambios</button>
+        </div>
+    </div>
+
+    <script src="extras/admin.js"></script>
+</body>
+</html>
